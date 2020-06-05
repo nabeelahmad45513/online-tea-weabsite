@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+}
+
+/* /===============navbar==========================/ */
+
+.nev-menu {
+    padding: 25px;
+}
+
+.fas {
+    color: #dbc1ac;
+}
+
+.menu {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #dbc1ac;
+    transition: all .4s;
+}
+
+.menu:hover {
+    color: #634832;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+/* /===============end of navbar==========================/ */
+
+/* /================== header start ============================/ */
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)), url(images/background\ img.jpg)no-repeat center center/cover;
+}
+
+.about
+{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)), url(images/about\ background\ img.jpg)no-repeat center center/cover;
+
+}
+
+.product
+{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)), url(images/product\ background\ img.jpg)no-repeat center center/cover;
+}
+
+.price
+{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)), url(images/price\ background\ pic.webp)no-repeat center center/cover;
+}
+
+.contact1
+{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)), url(images/contact\ background\ img.jpg)no-repeat center center/cover;
+}
+
+
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.heading {
+    animation-name: slide;
+    animation-duration: 2s;
+}
+
+.main {
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* /================== header end ============================/ */
+
+/* <!-- /================== ABOUT US ============================/ --> */
+#about
+{
+    background: #000;
+    /* margin-top: 30px; */
+    color: #dbc1ac;
+}
+
+.text
+{
+    font-size: 28px;
+}
+
+.about-images
+{
+    position: relative;
+}
+
+.about-img
+{
+    position: absolute;
+    width: 150px;
+    transition: all 2s ease;
+    opacity: 0.9;
+}
+
+.img1
+{
+    left: 0%;
+    top: 0%;
+    border: 3px solid white;
+}
+
+.img2
+{
+    left: 20%;
+    top: 20%;
+    z-index: 10;
+    border: 3px solid white;
+}
+
+.img3
+{
+    left: 40%;
+    top: 45%;
+    z-index: 20;
+    border: 3px solid white;
+}
+
+.img4
+{
+    left: 40%;
+    top: 0%;
+    border: 3px solid white;
+}
+
+.img5
+{
+    left: 0%;
+    top: 45%;
+    border: 3px solid white;
+}
+
+.about-img:hover
+{
+    outline: 10px solid #dbc1ac;
+    outline-offset: 32px;
+    transform: scale(1.3) rotate(20deg);
+    z-index: 30;
+    opacity: 1;
+}
+
+.about-images:hover,
+.about-img:not(:hover)
+{
+opacity: 0.5;
+}
+
+.btn
+{
+    color: #dbc1ac;
+    font-weight: bold;
+    border: 2px solid #634832;
+    font-size: 20px;
+}
+
+.hvr-right
+{
+    display: inline-block;
+    vertical-align: middle;
+    transition-duration: 0.5s;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0,0,0,);
+    position: relative;
+    transition-property: color;
+}
+
+.hvr-right:before
+{
+content:"";
+position: absolute;
+z-index: -1;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: #dbc1ac;
+transition-timing-function:ease-out;
+transform: scaleX(0);
+transform-origin: 0 50%;
+transition-property: transform;
+transition-duration: 0.5s;
+}
+
+.hvr-right:hover,.hvr-right:focus,
+.hvr-right:active
+{
+color: #000;
+}
+
+.hvr-right:hover:before, .hvr-right:focus:before,
+.hvr-right:active:before
+{
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transform: scaleX(1);
+}
+/* <!-- /================== END OF ABOUT US ============================/ --> */
+
+/* <!-- /================== video SECTION ============================/ --> */
+.most-liked
+{
+    position: relative;
+    /* margin-top: 25px; */
+}
+ .video-continer
+ {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     z-index: -1;
+ }
+ .bg-video
+ {
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+ }
+
+ .tea-card
+ {
+     position: relative;
+     box-shadow: 5px 15px 50px #634832;
+     max-width: 420px;
+     transition: all .8s;
+     overflow: hidden;
+     cursor: pointer;
+ }
+
+ .card-header .title-text
+ {
+     color: #000;
+ }
+
+ .rotate
+ {
+     perspective: 100rem;
+ }
+
+ .back
+ {
+position: absolute;
+top: -100%;
+background: #fff;
+height: 100%;
+width: 100%;
+opacity: 0;
+user-select: none;
+pointer-events: none;
+transform: rotateY(180deg);
+transition: top .8s opacity ,4s;
+ }
+
+ .text-color
+ {
+     color: #fff;
+ }
+
+ .back-content
+ {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);   
+ }
+
+ .rotate:hover .tea-card
+ {
+     transform: 
+     rotateY(180deg) ;
+ }
+
+ .rotate:hover .back
+ {
+     opacity: 1;
+     top: 0;
+     user-select: auto;
+     pointer-events: auto;
+ }
+
+ .back-content .btn
+ {
+ color: #000;
+ }
+/* <!-- /================== END OF video SECTION ============================/ --> */
+
+/* <!-- /==================  footer SECTION ============================/ --> */
+footer
+{
+    background-color: black;
+    padding-top: 2%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.text-center h4
+{
+ color: #dbc1ac;
+}
+
+footer span
+{
+    padding: 0.3em 0.7em;
+    transition: all .5s ease;
+}
+
+footer p
+{
+    color: #dbc1ac;
+    font-size: 20px;
+}
+
+footer .top a
+{
+    position: absolute;
+    right: 2%;
+    top: 69%;
+    color: #dbc1ac;
+    font-size: 20px;
+}
+/* <!-- /================== END OF footer SECTION ============================/ --> */
